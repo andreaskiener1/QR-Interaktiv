@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive SVG Grid</title>
+  <style>
+    .grid { fill: none; stroke: black; stroke-width: 0.03; }
+    .clickable { cursor: pointer; }
+	#saveButton {
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+	table {
+            width: 30%;
+            border-collapse: collapse;
+            margin: auto;
+        }
+    th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    th {
+            background-color: #f2f2f2;
+    }
+	.float-left{
+		float: left;
+		font-size: 0.5em;
+	}
+	.mask{
+		font-size: 0.5em;
+		border-collapse: collapse;
+		margin: auto;
+		width: 30%;
+		float: left;
+	
+	}
+	.formatcode{
+		font-size: 0.5em;
+		border-collapse: collapse;
+		margin: auto;
+		width: 30%;
+		//float: left;
+	}
+  </style>
+</head>
+<body>
+<!--button id="saveButton">Als Bild speichern</button -->
+<div class="float-left">
+<div>
+<svg id="svgGrid" width="250" height="220" xmlns="http://www.w3.org/2000/svg">
+  <g  class="grid">
+    <rect width="10" height="10" x="0" y="0" fill="white" stroke="none" />
+	
+	//Reihe 1
+  <rect id="rect1_1" width="10" height="10" x="10" y="10" fill="black" stroke="black" />
+  <rect id="rect1_2" width="10" height="10" x="20" y="10" fill="black" stroke="black" />
+  <rect id="rect1_3" width="10" height="10" x="30" y="10" fill="black" stroke="black" />
+  <rect id="rect1_4" width="10" height="10" x="40" y="10" fill="black" stroke="black" />
+  <rect id="rect1_5" width="10" height="10" x="50" y="10" fill="black" stroke="black" />
+  <rect id="rect1_6" width="10" height="10" x="60" y="10" fill="black" stroke="black" />
+  <rect id="rect1_7" width="10" height="10" x="70" y="10" fill="black" stroke="black" />
+  <rect id="rect1_8" width="10" height="10" x="80" y="10" fill="white" stroke="none" />
+  <rect id="rect1_9" width="10" height="10" x="90" y="10" fill="violet" stroke="black"  class="clickable" />
+  <rect id="rect1_10" width="10" height="10" x="100" y="10" fill="white" stroke="black" class="clickable"  />
+  <rect id="rect1_11" width="10" height="10" x="110" y="10" fill="white" stroke="black" class="clickable"  />
+  <rect id="rect1_12" width="10" height="10" x="120" y="10" fill="white" stroke="black" class="clickable"  />
+  <rect id="rect1_13" width="10" height="10" x="130" y="10" fill="white" stroke="black" class="clickable"  />
+  <rect id="rect1_14" width="10" height="10" x="140" y="10" fill="white" stroke="none" />
+  <rect id="rect1_15" width="10" height="10" x="150" y="10" fill="black" stroke="black" />
+  <rect id="rect1_16" width="10" height="10" x="160" y="10" fill="black" stroke="black" />
+  <rect id="rect1_17" width="10" height="10" x="170" y="10" fill="black" stroke="black" />
+  <rect id="rect1_18" width="10" height="10" x="180" y="10" fill="black" stroke="black" />
+  <rect id="rect1_19" width="10" height="10" x="190" y="10" fill="black" stroke="black" />
+  <rect id="rect1_20" width="10" height="10" x="200" y="10" fill="black" stroke="black" />	
+  <rect id="rect1_21" width="10" height="10" x="210" y="10" fill="black" stroke="black" />
+	
+		//Reihe 2
+	  <rect id="rect2_1" width="10" height="10" x="10" y="20" fill="black" stroke="black" />
+	  <rect id="rect2_2" width="10" height="10" x="20" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_3" width="10" height="10" x="30" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_4" width="10" height="10" x="40" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_5" width="10" height="10" x="50" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_6" width="10" height="10" x="60" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_7" width="10" height="10" x="70" y="20" fill="black" stroke="black" />
+	  <rect id="rect2_8" width="10" height="10" x="80" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_9" width="10" height="10" x="90" y="20" fill="violet" stroke="black" class="clickable" />
+	  <rect id="rect2_10" width="10" height="10" x="100" y="20" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect2_11" width="10" height="10" x="110" y="20" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect2_12" width="10" height="10" x="120" y="20" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect2_13" width="10" height="10" x="130" y="20" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect2_14" width="10" height="10" x="140" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_15" width="10" height="10" x="150" y="20" fill="black" stroke="black" />
+	  <rect id="rect2_16" width="10" height="10" x="160" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_17" width="10" height="10" x="170" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_18" width="10" height="10" x="180" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_19" width="10" height="10" x="190" y="20" fill="white" stroke="none" />
+	  <rect id="rect2_20" width="10" height="10" x="200" y="20" fill="white" stroke="none" />	
+	  <rect id="rect2_21" width="10" height="10" x="210" y="20" fill="black" stroke="black" /> 
+	
+	//Reihe 3
+	  <rect id="rect3_1" width="10" height="10" x="10" y="30" fill="black" stroke="black" />
+	  <rect id="rect3_2" width="10" height="10" x="20" y="30" fill="white" stroke="none" />
+	  <rect id="rect3_3" width="10" height="10" x="30" y="30" fill="black" stroke="black" />
+	  <rect id="rect3_4" width="10" height="10" x="40" y="30" fill="black" stroke="black" />
+	  <rect id="rect3_5" width="10" height="10" x="50" y="30" fill="black" stroke="black" />
+	  <rect id="rect3_6" width="10" height="10" x="60" y="30" fill="white" stroke="none" />
+	  <rect id="rect3_7" width="10" height="10" x="70" y="30" fill="black" stroke="black" />
+	  <rect id="rect3_8" width="10" height="10" x="80" y="30" fill="white" stroke="none" />
+	  <rect id="rect3_9" width="10" height="10" x="90" y="30" fill="violet" stroke="black" class="clickable" />
+	  <rect id="rect3_10" width="10" height="10" x="100" y="30" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect3_11" width="10" height="10" x="110" y="30" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect3_12" width="10" height="10" x="120" y="30" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect3_13" width="10" height="10" x="130" y="30" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect3_14" width="10" height="10" x="140" y="30" fill="white" stroke="none" />
+	  <rect id="rect3_15" width="10" height="10" x="150" y="30" fill="black" stroke="black" />
+	  <rect id="rect3_16" width="10" height="10" x="160" y="30" fill="white" stroke="none" />
+	  <rect id="rect3_17" width="10" height="10" x="170" y="30" fill="black" stroke="black" />
+	  <rect id="rect3_18" width="10" height="10" x="180" y="30" fill="black" stroke="black" />
+	  <rect id="rect3_19" width="10" height="10" x="190" y="30" fill="black" stroke="black" />
+	  <rect id="rect3_20" width="10" height="10" x="200" y="30" fill="white" stroke="none" />	
+	  <rect id="rect3_21" width="10" height="10" x="210" y="30" fill="black" stroke="black" />
+	
+	//Reihe 4
+	  <rect id="rect4_1" width="10" height="10" x="10" y="40" fill="black" stroke="black" />
+	  <rect id="rect4_2" width="10" height="10" x="20" y="40" fill="white" stroke="none" />
+	  <rect id="rect4_3" width="10" height="10" x="30" y="40" fill="black" stroke="black" />
+	  <rect id="rect4_4" width="10" height="10" x="40" y="40" fill="black" stroke="black" />
+	  <rect id="rect4_5" width="10" height="10" x="50" y="40" fill="black" stroke="black" />
+	  <rect id="rect4_6" width="10" height="10" x="60" y="40" fill="white" stroke="none" />
+	  <rect id="rect4_7" width="10" height="10" x="70" y="40" fill="black" stroke="black" />
+	  <rect id="rect4_8" width="10" height="10" x="80" y="40" fill="white" stroke="none" />
+	  <rect id="rect4_9" width="10" height="10" x="90" y="40" fill="violet" stroke="black" class="clickable" />
+	  <rect id="rect4_10" width="10" height="10" x="100" y="40" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect4_11" width="10" height="10" x="110" y="40" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect4_12" width="10" height="10" x="120" y="40" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect4_13" width="10" height="10" x="130" y="40" fill="white" stroke="black" class="clickable" />
+	  <rect id="rect4_14" width="10" height="10" x="140" y="40" fill="white" stroke="none" />
+	  <rect id="rect4_15" width="10" height="10" x="150" y="40" fill="black" stroke="black" />
+	  <rect id="rect4_16" width="10" height="10" x="160" y="40" fill="white" stroke="none" />
+	  <rect id="rect4_17" width="10" height="10" x="170" y="40" fill="black" stroke="black" />
+	  <rect id="rect4_18" width="10" height="10" x="180" y="40" fill="black" stroke="black" />
+	  <rect id="rect4_19" width="10" height="10" x="190" y="40" fill="black" stroke="black" />
+	  <rect id="rect4_20" width="10" height="10" x="200" y="40" fill="white" stroke="none" />	
+	  <rect id="rect4_21" width="10" height="10" x="210" y="40" fill="black" stroke="black" />	
+	
+	//Reihe 5
+	
+  <rect id="rect5_1" width="10" height="10" x="10" y="50" fill="black" stroke="black" />
+  <rect id="rect5_2" width="10" height="10" x="20" y="50" fill="white" stroke="none" />
+  <rect id="rect5_3" width="10" height="10" x="30" y="50" fill="black" stroke="black" />
+  <rect id="rect5_4" width="10" height="10" x="40" y="50" fill="black" stroke="black" />
+  <rect id="rect5_5" width="10" height="10" x="50" y="50" fill="black" stroke="black" />
+  <rect id="rect5_6" width="10" height="10" x="60" y="50" fill="white" stroke="none" />
+  <rect id="rect5_7" width="10" height="10" x="70" y="50" fill="black" stroke="black" />
+  <rect id="rect5_8" width="10" height="10" x="80" y="50" fill="white" stroke="none" />
+  <rect id="rect5_9" width="10" height="10" x="90" y="50" fill="violet" stroke="black" class="clickable"  />
+  <rect id="rect5_10" width="10" height="10" x="100" y="50" fill="white" stroke="black" class="clickable"  />
+  <rect id="rect5_11" width="10" height="10" x="110" y="50" fill="white" stroke="black" class="clickable"  />
+  <rect id="rect5_12" width="10" height="10" x="120" y="50" fill="white" stroke="black" class="clickable"  />
+  <rect id="rect5_13" width="10" height="10" x="130" y="50" fill="white" stroke="black" class="clickable"  />
+  <rect id="rect5_14" width="10" height="10" x="140" y="50" fill="white" stroke="none" />
+  <rect id="rect5_15" width="10" height="10" x="150" y="50" fill="black" stroke="black" />
+  <rect id="rect5_16" width="10" height="10" x="160" y="50" fill="white" stroke="none" />
+  <rect id="rect5_17" width="10" height="10" x="170" y="50" fill="black" stroke="black" />
+  <rect id="rect5_18" width="10" height="10" x="180" y="50" fill="black" stroke="black" />
+  <rect id="rect5_19" width="10" height="10" x="190" y="50" fill="black" stroke="black" />
+  <rect id="rect5_20" width="10" height="10" x="200" y="50" fill="white" stroke="none" />	
+	<rect id="rect5_21" width="10" height="10" x="210" y="50" fill="black" stroke="black" />
+	
+//Reihe 6
+	
+  <rect id="rect6_1" width="10" height="10" x="10" y="60" fill="black" stroke="black" />
+  <rect id="rect6_2" width="10" height="10" x="20" y="60" fill="white" stroke="none" />
+  <rect id="rect6_3" width="10" height="10" x="30" y="60" fill="white" stroke="none" />
+  <rect id="rect6_4" width="10" height="10" x="40" y="60" fill="white" stroke="none" />
+  <rect id="rect6_5" width="10" height="10" x="50" y="60" fill="white" stroke="none" />
+  <rect id="rect6_6" width="10" height="10" x="60" y="60" fill="white" stroke="none" />
+  <rect id="rect6_7" width="10" height="10" x="70" y="60" fill="black" stroke="black" />
+  <rect id="rect6_8" width="10" height="10" x="80" y="60" fill="white" stroke="none" />
+  <rect id="rect6_9" width="10" height="10" x="90" y="60" fill="violet" stroke="black" class="clickable" />
+  <rect id="rect6_10" width="10" height="10" x="100" y="60" fill="white" stroke="black" class="clickable" />
+  <rect id="rect6_11" width="10" height="10" x="110" y="60" fill="white" stroke="black" class="clickable" />
+  <rect id="rect6_12" width="10" height="10" x="120" y="60" fill="white" stroke="black" class="clickable" />
+  <rect id="rect6_13" width="10" height="10" x="130" y="60" fill="white" stroke="black" class="clickable" />
+  <rect id="rect6_14" width="10" height="10" x="140" y="60" fill="white" stroke="none" />
+  <rect id="rect6_15" width="10" height="10" x="150" y="60" fill="black" stroke="black" />
+  <rect id="rect6_16" width="10" height="10" x="160" y="60" fill="white" stroke="none" />
+  <rect id="rect6_17" width="10" height="10" x="170" y="60" fill="white" stroke="none" />
+  <rect id="rect6_18" width="10" height="10" x="180" y="60" fill="white" stroke="none" />
+  <rect id="rect6_19" width="10" height="10" x="190" y="60" fill="white" stroke="none" />
+  <rect id="rect6_20" width="10" height="10" x="200" y="60" fill="white" stroke="none" />	
+	<rect id="rect6_21" width="10" height="10" x="210" y="60" fill="black" stroke="black" />
+	
+//Reihe 7 unteres Ende Markierung, mit Spaltenindikator
+
+  <rect id="rect7_1" width="10" height="10" x="10" y="70" fill="black" stroke="black" />
+  <rect id="rect7_2" width="10" height="10" x="20" y="70" fill="black" stroke="black" />
+  <rect id="rect7_3" width="10" height="10" x="30" y="70" fill="black" stroke="black" />
+  <rect id="rect7_4" width="10" height="10" x="40" y="70" fill="black" stroke="black" />
+  <rect id="rect7_5" width="10" height="10" x="50" y="70" fill="black" stroke="black" />
+  <rect id="rect7_6" width="10" height="10" x="60" y="70" fill="black" stroke="black" />
+  <rect id="rect7_7" width="10" height="10" x="70" y="70" fill="black" stroke="black" />
+  <rect id="rect7_8" width="10" height="10" x="80" y="70" fill="white" stroke="none" />
+  <rect id="rect7_9" width="10" height="10" x="90" y="70" fill="black" stroke="black" />
+  <rect id="rect7_10" width="10" height="10" x="100" y="70" fill="white" stroke="black" />
+  <rect id="rect7_11" width="10" height="10" x="110" y="70" fill="black" stroke="black" />
+  <rect id="rect7_12" width="10" height="10" x="120" y="70" fill="white" stroke="black" />
+  <rect id="rect7_13" width="10" height="10" x="130" y="70" fill="black" stroke="black" />
+  <rect id="rect7_14" width="10" height="10" x="140" y="70" fill="white" stroke="none" />
+  <rect id="rect7_15" width="10" height="10" x="150" y="70" fill="black" stroke="black" />
+  <rect id="rect7_16" width="10" height="10" x="160" y="70" fill="black" stroke="black" />
+  <rect id="rect7_17" width="10" height="10" x="170" y="70" fill="black" stroke="black" />
+  <rect id="rect7_18" width="10" height="10" x="180" y="70" fill="black" stroke="black" />
+  <rect id="rect7_19" width="10" height="10" x="190" y="70" fill="black" stroke="black" />
+  <rect id="rect7_20" width="10" height="10" x="200" y="70" fill="black" stroke="black" />	
+  <rect id="rect7_21" width="10" height="10" x="210" y="70" fill="black" stroke="black" />
+
+//Reihe 8 mit Quiet Zone
+  <rect id="rect8_1" width="10" height="10" x="10" y="80" fill="white" stroke="none" />
+  <rect id="rect8_2" width="10" height="10" x="20" y="80" fill="white" stroke="none" />
+  <rect id="rect8_3" width="10" height="10" x="30" y="80" fill="white" stroke="none" />
+  <rect id="rect8_4" width="10" height="10" x="40" y="80" fill="white" stroke="none" />
+  <rect id="rect8_5" width="10" height="10" x="50" y="80" fill="white" stroke="none" />
+  <rect id="rect8_6" width="10" height="10" x="60" y="80" fill="white" stroke="none" />
+  <rect id="rect8_7" width="10" height="10" x="70" y="80" fill="white" stroke="none" />
+  <rect id="rect8_8" width="10" height="10" x="80" y="80" fill="white" stroke="none" />
+  <rect id="rect8_9" width="10" height="10" x="90" y="80" fill="violet" stroke="black" class="clickable" />
+  <rect id="rect8_10" width="10" height="10" x="100" y="80" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect8_11" width="10" height="10" x="110" y="80" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect8_12" width="10" height="10" x="120" y="80" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect8_13" width="10" height="10" x="130" y="80" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect8_14" width="10" height="10" x="140" y="80" fill="white" stroke="none" />
+  <rect id="rect8_15" width="10" height="10" x="150" y="80" fill="white" stroke="none" />
+  <rect id="rect8_16" width="10" height="10" x="160" y="80" fill="white" stroke="none" />
+  <rect id="rect8_17" width="10" height="10" x="170" y="80" fill="white" stroke="none" />
+  <rect id="rect8_18" width="10" height="10" x="180" y="80" fill="white" stroke="none" />
+  <rect id="rect8_19" width="10" height="10" x="190" y="80" fill="white" stroke="none" />
+  <rect id="rect8_20" width="10" height="10" x="200" y="80" fill="white" stroke="none" />	
+  <rect id="rect8_21" width="10" height="10" x="210" y="80" fill="white" stroke="none" />
+  
+ //Reihe 9 erste vollständig editierbare Zeile
+  <rect id="rect9_1" width="10" height="10" x="10" y="90" fill="Greenyellow" stroke="black"  class="clickable" />
+     <text x="15" y="95" font-size="3" stroke="none" fill="black" text-anchor="middle" dominant-baseline="middle">1</text>
+  <rect id="rect9_2" width="10" height="10" x="20" y="90" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect9_3" width="10" height="10" x="30" y="90" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect9_4" width="10" height="10" x="40" y="90" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect9_5" width="10" height="10" x="50" y="90" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect9_6" width="10" height="10" x="60" y="90" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect9_7" width="10" height="10" x="70" y="90" fill="black" stroke="black"   />
+  <rect id="rect9_8" width="10" height="10" x="80" y="90" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect9_9" width="10" height="10" x="90" y="90" fill="violet" stroke="black"  class="clickable" />
+     <text x="95" y="95" font-size="3" stroke="none" fill="black" text-anchor="middle" dominant-baseline="middle">8</text>
+  <rect id="rect9_10" width="10" height="10" x="100" y="90" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect9_11" width="10" height="10" x="110" y="90" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect9_12" width="10" height="10" x="120" y="90" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect9_13" width="10" height="10" x="130" y="90" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect9_14" width="10" height="10" x="140" y="90" fill="violet" stroke="black"  class="clickable" />
+	<text x="145" y="95" font-size="3" stroke="none" fill="black" text-anchor="middle" dominant-baseline="middle">8</text>
+  <rect id="rect9_15" width="10" height="10" x="150" y="90" fill="violet" stroke="black"  class="clickable" />
+  <rect id="rect9_16" width="10" height="10" x="160" y="90" fill="violet" stroke="black"  class="clickable" />
+  <rect id="rect9_17" width="10" height="10" x="170" y="90" fill="violet" stroke="black"  class="clickable" />
+  <rect id="rect9_18" width="10" height="10" x="180" y="90" fill="violet" stroke="black"  class="clickable" />
+  <rect id="rect9_19" width="10" height="10" x="190" y="90" fill="violet" stroke="black"  class="clickable" />
+  <rect id="rect9_20" width="10" height="10" x="200" y="90" fill="violet" stroke="black"  class="clickable" />	
+  <rect id="rect9_21" width="10" height="10" x="210" y="90" fill="violet" stroke="black"  class="clickable" />
+  
+//Reihe 10
+   <rect id="rect10_1" width="10" height="10" x="10" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_2" width="10" height="10" x="20" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_3" width="10" height="10" x="30" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_4" width="10" height="10" x="40" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_5" width="10" height="10" x="50" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_6" width="10" height="10" x="60" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_7" width="10" height="10" x="70" y="100" fill="white" stroke="black" />
+  <rect id="rect10_8" width="10" height="10" x="80" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_9" width="10" height="10" x="90" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_10" width="10" height="10" x="100" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_11" width="10" height="10" x="110" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_12"  width="10" height="10" x="120" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_13" width="10" height="10" x="130" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_14" width="10" height="10" x="140" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_15" width="10" height="10" x="150" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_16" width="10" height="10" x="160" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_17" width="10" height="10" x="170" y="100" fill="white" stroke="black"   class="clickable" />
+  <rect id="rect10_18" width="10" height="10" x="180" y="100" fill="white" stroke="black"   class="clickable" />
+   <text x="185" y="105" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">6</text>
+
+  <rect  id="rect10_19" width="10" height="10" x="190" y="100" fill="white" stroke="black"   class="clickable" />
+       <text x="195" y="105" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">5</text>
+
+  <rect  id="rect10_20" width="10" height="10" x="200" y="100" fill="white" stroke="black"   class="clickable" />
+     <text x="205" y="105" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">4</text>
+  
+  <rect  id="rect10_21" width="10" height="10" x="210" y="100" fill="white" stroke="black"   class="clickable" /> 
+     <text x="215" y="105" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">3</text>
+
+
+//Reihe 11
+  <rect id="rect11_1" width="10" height="10" x="10" y="110" fill="white" stroke="black" class="clickable" />
+  <rect id="rect11_2" width="10" height="10" x="20" y="110" fill="white" stroke="black" class="clickable" />
+  <rect id="rect11_3" width="10" height="10" x="30" y="110" fill="white" stroke="black" class="clickable" />
+  <rect id="rect11_4" width="10" height="10" x="40" y="110" fill="white" stroke="black" class="clickable" />
+  <rect id="rect11_5" width="10" height="10" x="50" y="110" fill="white" stroke="black" class="clickable" />
+  <rect id="rect11_6" width="10" height="10" x="60" y="110" fill="white" stroke="black" class="clickable" />
+  <rect id="rect11_7" width="10" height="10" x="70" y="110" fill="black" stroke="black" />
+  <rect id="rect11_8" width="10" height="10" x="80" y="110" fill="white" stroke="black" class="clickable" />
+  <rect id="rect11_9" width="10" height="10" x="90" y="110" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect11_10" width="10" height="10" x="100" y="110" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect11_11" width="10" height="10" x="110" y="110" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect11_12" width="10" height="10" x="120" y="110" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect11_13" width="10" height="10" x="130" y="110" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect11_14" width="10" height="10" x="140" y="110" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect11_15" width="10" height="10" x="150" y="110" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect11_16" width="10" height="10" x="160" y="110" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect11_17" width="10" height="10" x="170" y="110" fill="white" stroke="black"  class="clickable"/>
+      <text x="175" y="115" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">1</text>
+ 
+  
+  <rect id="rect11_18" width="10" height="10" x="180" y="110" fill="white" stroke="black"  class="clickable"/>
+     <text x="185" y="115" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">8</text>
+ 
+  <rect id="rect11_19" width="19" height="10" x="190" y="110" fill="white" stroke="black"  class="clickable"/>
+    <text x="195" y="115" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">7</text>
+
+  <rect id="rect11_20" width="10" height="10" x="200" y="110" fill="white" stroke="black"  class="clickable"/>	
+     <text x="205" y="115" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">2</text>
+
+  <rect id="rect11_21" width="10" height="10" x="210" y="110" fill="white" stroke="black"  class="clickable"/>
+   <text x="215" y="115" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">1</text>
+ 
+  
+ //Reihe 12
+  <rect id="rect12_1" width="10" height="10" x="10" y="120" fill="white" stroke="black" class="clickable" />
+  <rect id="rect12_2" width="10" height="10" x="20" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_3" width="10" height="10" x="30" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_4" width="10" height="10" x="40" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_5" width="10" height="10" x="50" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_6" width="10" height="10" x="60" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_7" width="10" height="10" x="70" y="120" fill="white" stroke="black" />
+  <rect id="rect12_8" width="10" height="10" x="80" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_9" width="10" height="10" x="90" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_10" width="10" height="10" x="100" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_11" width="10" height="10" x="110" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_12" width="10" height="10" x="120" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_13" width="10" height="10" x="130" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_14" width="10" height="10" x="140" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_15" width="10" height="10" x="150" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_16" width="10" height="10" x="160" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_17" width="10" height="10" x="170" y="120" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect12_18" width="10" height="10" x="180" y="120" fill="white" stroke="black" class="clickable"/>
+      <text x="185" y="125" font-size="3" stroke="none" fill="green" text-anchor="middle" dominant-baseline="middle">2</text>
+
+  <rect id="rect12_19" width="10" height="10" x="190" y="120" fill="white" stroke="black" class="clickable"/>
+      <text x="195" y="125" font-size="3" stroke="none" fill="green" text-anchor="middle" dominant-baseline="middle">1</text>
+
+  <rect id="rect12_20" width="10" height="10" x="200" y="120" fill="white" stroke="black" class="clickable"/>
+    <text x="205" y="125" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">8</text>
+   
+  <rect id="rect12_21" width="10" height="10" x="210" y="120" fill="white" stroke="black" class="clickable"/>
+      <text x="215" y="125" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">7</text>
+ 
+  
+ //Reihe 13 Letzte voll editierbare zeile
+  <rect id="rect13_1" width="10" height="10" x="10" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_2" width="10" height="10" x="20" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_3" width="10" height="10" x="30" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_4" width="10" height="10" x="40" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_5" width="10" height="10" x="50" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_6" width="10" height="10" x="60" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_7" width="10" height="10" x="70" y="130" fill="black" stroke="black" />
+  <rect id="rect13_8" width="10" height="10" x="80" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_9" width="10" height="10" x="90" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_10" width="10" height="10" x="100" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_11" width="10" height="10" x="110" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_12" width="10" height="10" x="120" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_13" width="10" height="10" x="130" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_14" width="10" height="10" x="140" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_15" width="10" height="10" x="150" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_16" width="10" height="10" x="160" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_17" width="10" height="10" x="170" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_18" width="10" height="10" x="180" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_19" width="10" height="10" x="190" y="130" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect13_20" width="10" height="10" x="200" y="130" fill="white" stroke="black"  class="clickable"/>	
+      <text x="205" y="135" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">6</text>
+ 
+  <rect id="rect13_21" width="10" height="10" x="210" y="130" fill="white" stroke="black"  class="clickable"/> 
+      <text x="215" y="135" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">5</text>
+ 
+
+//Reihe 14 mit quiet Zone
+  <rect id="rect14_1" width="10" height="10" x="10" y="140" fill="white" stroke="none" />
+  <rect id="rect14_2" width="10" height="10" x="20" y="140" fill="white" stroke="none" />
+  <rect id="rect14_3" width="10" height="10" x="30" y="140" fill="white" stroke="none" />
+  <rect id="rect14_4" width="10" height="10" x="40" y="140" fill="white" stroke="none" />
+  <rect id="rect14_5" width="10" height="10" x="50" y="140" fill="white" stroke="none" />
+  <rect id="rect14_6" width="10" height="10" x="60" y="140" fill="white" stroke="none" />
+  <rect id="rect14_7" width="10" height="10" x="70" y="140" fill="white" stroke="none" />
+  <rect id="rect14_8" width="10" height="10" x="80" y="140" fill="white" stroke="none" />
+  <rect id="rect14_9" width="10" height="10" x="90" y="140" fill="black" stroke="black" />
+  <rect id="rect14_10" width="10" height="10" x="100" y="140" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect14_11" width="10" height="10" x="110" y="140" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect14_12" width="10" height="10" x="120" y="140" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect14_13" width="10" height="10" x="130" y="140" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect14_14" width="10" height="10" x="140" y="140" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect14_15" width="10" height="10" x="150" y="140" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect14_16" width="10" height="10" x="160" y="140" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect14_17" width="10" height="10" x="170" y="140" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect14_18" width="10" height="10" x="180" y="140" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect14_19" width="10" height="10" x="190" y="140" fill="white" stroke="black" class="clickable"/>
+  <rect id="rect14_20" width="10" height="10" x="200" y="140" fill="white" stroke="black" class="clickable"/>
+  <text x="205" y="145" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">4</text>
+   
+  <rect id="rect14_21" width="10" height="10" x="210" y="140" fill="white" stroke="black" class="clickable"/> 
+    <text x="215" y="145" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">3</text>
+ 
+  
+ //Reihe 15 Zeile schwarz
+  <rect id="rect15_1" width="10" height="10" x="10" y="150" fill="black" stroke="black" />
+  <rect id="rect15_2" width="10" height="10" x="20" y="150" fill="black" stroke="black" />
+  <rect id="rect15_3" width="10" height="10" x="30" y="150" fill="black" stroke="black" />
+  <rect id="rect15_4" width="10" height="10" x="40" y="150" fill="black" stroke="black" />
+  <rect id="rect15_5" width="10" height="10" x="50" y="150" fill="black" stroke="black" />
+  <rect id="rect15_6" width="10" height="10" x="60" y="150" fill="black" stroke="black" />
+  <rect id="rect15_7" width="10" height="10" x="70" y="150" fill="black" stroke="black" />
+  <rect id="rect15_8" width="10" height="10" x="80" y="150" fill="white" stroke="none" />
+  <rect id="rect15_9" width="10" height="10" x="90" y="150" fill="Greenyellow" stroke="black" class="clickable"/>
+  <rect id="rect15_10" width="10" height="10" x="100" y="150" fill="white" stroke="black"  class="clickable"/>
+  <rect id="rect15_11" width="10" height="10" x="110" y="150" fill="white" stroke="black"   class="clickable"/>
+  <rect id="rect15_12" width="10" height="10" x="120" y="150" fill="white" stroke="black"   class="clickable"/>
+  <rect id="rect15_13" width="10" height="10" x="130" y="150" fill="white" stroke="black"   class="clickable"/>
+  <rect id="rect15_14" width="10" height="10" x="140" y="150" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect15_15" width="10" height="10" x="150" y="150" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect15_16" width="10" height="10" x="160" y="150" fill="white" stroke="black"  class="clickable" />
+    	<text x="165" y="155" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">2</text>
+ 
+  <rect id="rect15_17" width="10" height="10" x="170" y="150" fill="white" stroke="black"  class="clickable" />
+    	<text x="175" y="155" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">1</text>
+ 
+  <rect id="rect15_18" width="10" height="10" x="180" y="150" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect15_19" width="10" height="10" x="190" y="150" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect15_20" width="10" height="10" x="200" y="150" fill="white" stroke="black"  class="clickable" />
+  <text x="205" y="155" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">2</text>
+  
+  <rect id="rect15_21" width="10" height="10" x="210" y="150" fill="white" stroke="black"  class="clickable" />
+  <text x="215" y="155" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">1</text>
+   
+  
+//Reihe 16
+  <rect id="rect16_1" width="10" height="10" x="10" y="160" fill="black" stroke="black" />
+  <rect id="rect16_2" width="10" height="10" x="20" y="160" fill="white" stroke="none" />
+  <rect id="rect16_3" width="10" height="10" x="30" y="160" fill="white" stroke="none" />
+  <rect id="rect16_4" width="10" height="10" x="40" y="160" fill="white" stroke="none" />
+  <rect id="rect16_5" width="10" height="10" x="50" y="160" fill="white" stroke="none" />
+  <rect id="rect16_6" width="10" height="10" x="60" y="160" fill="white" stroke="none" />
+  <rect id="rect16_7" width="10" height="10" x="70" y="160" fill="black" stroke="black" />
+  <rect id="rect16_8" width="10" height="10" x="80" y="160" fill="white" stroke="none" />
+  <rect id="rect16_9" width="10" height="10" x="90" y="160" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect16_10" width="10" height="10" x="100" y="160" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect16_11" width="10" height="10" x="110" y="160" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect16_12" width="10" height="10" x="120" y="160" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect16_13" width="10" height="10" x="130" y="160" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect16_14" width="10" height="10" x="140" y="160" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect16_15" width="10" height="10" x="150" y="160" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect16_16" width="10" height="10" x="160" y="160" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect16_17" width="10" height="10" x="170" y="160" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect16_18" width="10" height="10" x="180" y="160" fill="white" stroke="black"  class="clickable" />
+     <text x="185" y="165" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">2</text>
+ 
+  <rect id="rect16_19" width="10" height="10" x="190" y="160" fill="white" stroke="black"  class="clickable" />
+    <text x="195" y="165" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">1</text>
+ 
+  <rect id="rect16_20" width="10" height="10" x="200" y="160" fill="white" stroke="black"  class="clickable" />
+  <text x="205" y="165" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">8</text>
+   
+  <rect id="rect16_21" width="10" height="10" x="210" y="160" fill="white" stroke="black"  class="clickable" />
+  <text x="215" y="165" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">7</text>
+ 
+  
+ //Reihe 17
+   <rect id="rect17_1" width="10" height="10" x="10" y="170" fill="black" stroke="black" />
+  <rect id="rect17_2" width="10" height="10" x="20" y="170" fill="white" stroke="none" />
+  <rect id="rect17_3" width="10" height="10" x="30" y="170" fill="black" stroke="none" />
+  <rect id="rect17_4" width="10" height="10" x="40" y="170" fill="black" stroke="none" />
+  <rect id="rect17_5" width="10" height="10" x="50" y="170" fill="black" stroke="none" />
+  <rect id="rect17_6" width="10" height="10" x="60" y="170" fill="white" stroke="none" />
+  <rect id="rect17_7" width="10" height="10" x="70" y="170" fill="black" stroke="black" />
+  <rect id="rect17_8" width="10" height="10" x="80" y="170" fill="white" stroke="none" />
+  <rect id="rect17_9" width="10" height="10" x="90" y="170" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect17_10" width="10" height="10" x="100" y="170" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect17_11" width="10" height="10" x="110" y="170" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect17_12" width="10" height="10" x="120" y="170" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect17_13" width="10" height="10" x="130" y="170" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect17_14" width="10" height="10" x="140" y="170" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect17_15" width="10" height="10" x="150" y="170" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect17_16" width="10" height="10" x="160" y="170" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect17_17" width="10" height="10" x="170" y="170" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect17_18" width="10" height="10" x="180" y="170" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect17_19" width="10" height="10" x="190" y="170" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect17_20" width="10" height="10" x="200" y="170" fill="white" stroke="black"  class="clickable" />	
+  	<text x="205" y="175" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">6</text>
+ 
+ 	<rect id="rect17_21" width="10" height="10" x="210" y="170" fill="white" stroke="black"  class="clickable" />
+	<text x="215" y="175" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">5</text>
+ 
+	
+//Reihe 18
+  <rect id="rect18_1" width="10" height="10" x="10" y="180" fill="black" stroke="black" />
+  <rect id="rect18_2" width="10" height="10" x="20" y="180" fill="white" stroke="none" />
+  <rect id="rect18_3" width="10" height="10" x="30" y="180" fill="black" stroke="none" />
+  <rect id="rect18_4" width="10" height="10" x="40" y="180" fill="black" stroke="none" />
+  <rect id="rect18_5" width="10" height="10" x="50" y="180" fill="black" stroke="none" />
+  <rect id="rect18_6" width="10" height="10" x="60" y="180" fill="white" stroke="none" />
+  <rect id="rect18_7" width="10" height="10" x="70" y="180" fill="black" stroke="black" />
+  <rect id="rect18_8" width="10" height="10" x="80" y="180" fill="white" stroke="none" />
+  <rect id="rect18_9" width="10" height="10" x="90" y="180" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect18_10" width="10" height="10" x="100" y="180" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect18_11" width="10" height="10" x="110" y="180" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect18_12" width="10" height="10" x="120" y="180" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect18_13" width="10" height="10" x="130" y="180" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect18_14" width="10" height="10" x="140" y="180" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect18_15" width="10" height="10" x="150" y="180" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect18_16" width="10" height="10" x="160" y="180" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect18_17" width="10" height="10" x="170" y="180" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect18_18" width="10" height="10" x="180" y="180" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect18_19" width="10" height="10" x="190" y="180" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect18_20" width="10" height="10" x="200" y="180" fill="white" stroke="black"  class="clickable" />
+		<text x="205" y="185" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">4</text>
+   
+ 	<rect id="rect18_21" width="10" height="10" x="210" y="180" fill="white" stroke="black"  class="clickable" />
+		<text x="215" y="185" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">3</text>
+ 
+	
+//Reihe 19
+	<rect id="rect19_1" width="10" height="10" x="10" y="190" fill="black" stroke="black" />
+  <rect id="rect19_2" width="10" height="10" x="20" y="190" fill="white" stroke="none" />
+  <rect id="rect19_3" width="10" height="10" x="30" y="190" fill="black" stroke="none" />
+  <rect id="rect19_4" width="10" height="10" x="40" y="190" fill="black" stroke="none" />
+  <rect id="rect19_5" width="10" height="10" x="50" y="190" fill="black" stroke="none" />
+  <rect id="rect19_6" width="10" height="10" x="60" y="190" fill="white" stroke="none" />
+  <rect id="rect19_7" width="10" height="10" x="70" y="190" fill="black" stroke="black" />
+  <rect id="rect19_8" width="10" height="10" x="80" y="190" fill="white" stroke="none" />
+  <rect id="rect19_9" width="10" height="10" x="90" y="190" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect19_10" width="10" height="10" x="100" y="190" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect19_11" width="10" height="10" x="110" y="190" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect19_12" width="10" height="10" x="120" y="190" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect19_13" width="10" height="10" x="130" y="190" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect19_14" width="10" height="10" x="140" y="190" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect19_15" width="10" height="10" x="150" y="190" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect19_16" width="10" height="10" x="160" y="190" fill="white" stroke="black"  class="clickable" />
+     <text x="165" y="195" font-size="3" stroke="none" fill="green" text-anchor="middle" dominant-baseline="middle">2</text>
+ 
+  <rect id="rect19_17" width="10" height="10" x="170" y="190" fill="white" stroke="black"  class="clickable" />
+   <text x="175" y="195" font-size="3" stroke="none" fill="green" text-anchor="middle" dominant-baseline="middle">1</text>
+ 
+  <rect id="rect19_18" width="10" height="10" x="180" y="190" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect19_19" width="10" height="10" x="190" y="190" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect19_20" width="10" height="10" x="200" y="190" fill="white" stroke="black"  class="clickable" />	
+  	<text x="205" y="195" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">2</text>
+ 
+ 	<rect id="rect19_21" width="10" height="10" x="210" y="190" fill="white" stroke="black"  class="clickable" />
+	<text x="215" y="195" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">1</text>
+ 
+	
+//Reihe 20
+  <rect id="rect20_1" width="10" height="10" x="10" y="200" fill="black" stroke="black" />
+  <rect id="rect20_2" width="10" height="10" x="20" y="200" fill="white" stroke="none" />
+  <rect id="rect20_3" width="10" height="10" x="30" y="200" fill="white" stroke="none" />
+  <rect id="rect20_4" width="10" height="10" x="40" y="200" fill="white" stroke="none" />
+  <rect id="rect20_5" width="10" height="10" x="50" y="200" fill="white" stroke="none" />
+  <rect id="rect20_6" width="10" height="10" x="60" y="200" fill="white" stroke="none" />
+  <rect id="rect20_7" width="10" height="10" x="70" y="200" fill="black" stroke="black" />
+  <rect id="rect20_8" width="10" height="10" x="80" y="200" fill="white" stroke="none" />
+  <rect id="rect20_9" width="10" height="10" x="90" y="200" fill="Greenyellow" stroke="black"  class="clickable" />
+  <rect id="rect20_10" width="10" height="10" x="100" y="200" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect20_11" width="10" height="10" x="110" y="200" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect20_12" width="10" height="10" x="120" y="200" fill="white" stroke="black" class="clickable" />
+  <rect id="rect20_13" width="10" height="10" x="130" y="200" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect20_14" width="10" height="10" x="140" y="200" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect20_15" width="10" height="10" x="150" y="200" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect20_16" width="10" height="10" x="160" y="200" fill="white" stroke="black"  class="clickable" />
+       <text x="165" y="205" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">8</text>
+
+  <rect id="rect20_17" width="10" height="10" x="170" y="200" fill="white" stroke="black"  class="clickable" />
+      <text x="175" y="205" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">7</text>
+
+  <rect id="rect20_18" width="10" height="10" x="180" y="200" fill="white" stroke="black"  class="clickable" />
+      <text x="185" y="205" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">2</text>
+
+  <rect id="rect20_19" width="10" height="10" x="190" y="200" fill="white" stroke="black"  class="clickable" />
+    <text x="195" y="205" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">1</text>
+ 
+  <rect id="rect20_20" width="10" height="10" x="200" y="200" fill="white" stroke="black"  class="clickable" />
+    <text x="205" y="205" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">4</text>
+   
+  <rect id="rect20_21" width="10" height="10" x="210" y="200" fill="white" stroke="black"  class="clickable" />
+    <text x="215" y="205" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">3</text>
+ 
+
+//Reihe 21
+  <rect id="rect21_1" width="10" height="10" x="10" y="210" fill="black" stroke="black" />
+  <rect id="rect21_2" width="10" height="10" x="20" y="210" fill="black" stroke="none" />
+  <rect id="rect21_3" width="10" height="10" x="30" y="210" fill="black" stroke="none" />
+  <rect id="rect21_4" width="10" height="10" x="40" y="210" fill="black" stroke="none" />
+  <rect id="rect21_5" width="10" height="10" x="50" y="210" fill="black" stroke="none" />
+  <rect id="rect21_6" width="10" height="10" x="60" y="210" fill="black" stroke="none" />
+  <rect id="rect21_7" width="10" height="10" x="70" y="210" fill="black" stroke="black" />
+  <rect id="rect21_8" width="10" height="10" x="80" y="210" fill="white" stroke="none" />
+  <rect id="rect21_9" width="10" height="10" x="90" y="210" fill="Greenyellow" stroke="black"  class="clickable" />
+	   <text x="95" y="215" font-size="3" stroke="none" fill="black" text-anchor="middle" dominant-baseline="middle">1</text>
+  <rect id="rect21_10" width="10" height="10" x="100" y="210" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect21_11" width="10" height="10" x="110" y="210" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect21_12" width="10" height="10" x="120" y="210" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect21_13" width="10" height="10" x="130" y="210" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect21_14" width="10" height="10" x="140" y="210" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect21_15" width="10" height="10" x="150" y="210" fill="white" stroke="black"  class="clickable" />
+  <rect id="rect21_16" width="10" height="10" x="160" y="210" fill="white" stroke="black"  class="clickable" />
+       <text x="165" y="215" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">6</text>
+
+  <rect id="rect21_17" width="10" height="10" x="170" y="210" fill="white" stroke="black"  class="clickable" />
+   <text x="175" y="215" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">5</text>
+
+  <rect id="rect21_18" width="10" height="10" x="180" y="210" fill="white" stroke="black"  class="clickable" />
+     <text x="185" y="215" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">4</text>
+ 
+  <rect id="rect21_19" width="10" height="10" x="190" y="210" fill="white" stroke="black"  class="clickable" />
+     <text x="195" y="215" font-size="3" stroke="none" fill="lightblue" text-anchor="middle" dominant-baseline="middle">3</text>
+ 
+  <rect id="rect21_20" width="10" height="10" x="200" y="210" fill="white" stroke="black"  class="clickable" />
+   <text x="205" y="215" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">2</text>
+   
+  <rect id="rect21_21" width="10" height="10" x="210" y="210" fill="white" stroke="black"  class="clickable" />
+  <text x="215" y="215" font-size="3" stroke="none" fill="orange" text-anchor="middle" dominant-baseline="middle">1</text>
+  
+  </g>
+</svg>
+</div>
+<div><br><a href="http://www.cdsy.de/Arithmetik/EncodeTXT/QR_EN_Start.php" target="_blank"> http://www.cdsy.de/Arithmetik/EncodeTXT/QR_EN_Start.php"</a></div>
+<br>
+<div style="font-size: 10px;">Abwechselnd verbleibende Stellen mit Füllbitts<br> auffüllen bis 19 Blöcke voll sind.<br> Dezimal 263 Binär 11101100 und <br>Dezimal 17 Binär 100010001</div>
+
+<br>
+<div class="mask">	
+<table style="font-size: 10px;">
+		<tr><th>Encoding Nr.</th><th>Bytemuster</th><th>Beschreibung</th></tr>
+		<tr><td>1</td><td>0001</td><td>Numerisch</td><tr>
+		<tr><td>2</td><td>0010</td><td>Alphanumerisch</td><tr>
+		<tr><td>4</td><td>0100</td><td>Byte encoding</td><tr>
+		<tr><th>Korr.level</th><th>MaskenNr.</th><th>     Kodierung    </th></tr>
+		<tr><td>L</td><td>0</td><td><font color="greenyellow"> 1110111</font><font color="violet">11000100</font></td></tr>
+		<tr><td>L</td><td>1</td><td><font color="greenyellow"> 1110010</font><font color="violet">11110011</font></td></tr>
+		<tr><td>L</td><td>2</td><td><font color="greenyellow"> 1111101</font><font color="violet">10101010</font></td></tr>
+		<tr><td>L</td><td>3</td><td><font color="greenyellow"> 1111000</font><font color="violet">10011101</font></td></tr>
+		<tr><td>M</td><td>0</td><td><font color="greenyellow"> 1010100</font><font color="violet">00010010</font></td></tr>
+		<tr><td>M</td><td>1</td><td><font color="greenyellow"> 1010001</font><font color="violet">00100101</font></td></tr>
+		<tr><td>M</td><td>2</td><td><font color="greenyellow"> 1011110</font><font color="violet">01111100</font></td></tr>
+		<tr><td>M</td><td>3</td><td><font color="greenyellow"> 1011011</font><font color="violet">01001011</font></td></tr>
+</table>
+</div>
+
+</div>
+
+<div class="mask">
+   <table>
+        <tr>
+            <th>Maske</th>
+            <th>Muster</th>
+			<th>Auswahl</th>
+        </tr>
+        <tr>
+            <td>Maske 0</td>
+            <td>(i + j) % 2 == 0</td>
+			<td><input type="radio" name="maske" value="mask0"></td>
+        </tr>
+        <tr>
+            <td>Maske 1</td>
+            <td>i % 2 == 0</td>
+			<td><input type="radio" name="maske" value="mask1"></td>
+        </tr>
+        <tr>
+            <td>Maske 2</td>
+            <td>j % 3 == 0</td>
+			<td><input type="radio" name="maske" value="mask2"></td>
+        </tr>
+        <tr>
+            <td>Maske 3</td>
+            <td>(i + j) % 3 == 0</td>
+			<td><input type="radio" name="maske" value="mask3"></td>
+        </tr>
+        <tr>
+            <td>Maske 4</td>
+            <td>alle 0</td>
+			<td><input type="radio" name="maske" value="mask4"></td>
+        </tr>
+        
+    </table>
+</div>
+
+<div class="float-left">
+   <table>
+        <tr><th>Zeichen</th><th>Dez</th><th>ASCII</th><th>Zeichen</th><th>Dez</th><th>ASCII</th></tr>
+        <tr><td>A</td><td>65</td><td>01000001</td><td>a</td><td>97</td><td>01100001</td></tr>
+        <tr><td>B</td><td>66</td><td>01000010</td><td>b</td><td>98</td><td>01100010</td></tr>
+        <tr><td>C</td><td>67</td><td>01000011</td><td>c</td><td>99</td><td>01100011</td></tr>
+        <tr><td>D</td><td>68</td><td>01000100</td><td>d</td><td>100</td><td>01100100</td></tr>
+        <tr><td>E</td><td>69</td><td>01000101</td><td>e</td><td>101</td><td>01100101</td></tr>
+        <tr><td>F</td><td>70</td><td>01000110</td><td>f</td><td>102</td><td>01100110</td></tr>
+        <tr><td>G</td><td>71</td><td>01000111</td><td>g</td><td>103</td><td>01100111</td></tr>
+        <tr><td>H</td><td>72</td><td>01001000</td><td>h</td><td>104</td><td>01101000</td></tr>
+        <tr><td>I</td><td>73</td><td>01001001</td><td>i</td><td>105</td><td>01101001</td></tr>
+        <tr><td>J</td><td>74</td><td>01001010</td><td>j</td><td>106</td><td>01101010</td></tr>
+        <tr><td>K</td><td>75</td><td>01001011</td><td>k</td><td>107</td><td>01101011</td></tr>
+        <tr><td>L</td><td>76</td><td>01001100</td><td>l</td><td>108</td><td>01101100</td></tr>
+        <tr><td>M</td><td>77</td><td>01001101</td><td>m</td><td>109</td><td>01101101</td></tr>
+        <tr><td>N</td><td>78</td><td>01001110</td><td>n</td><td>110</td><td>01101110</td></tr>
+        <tr><td>O</td><td>79</td><td>01001111</td><td>o</td><td>111</td><td>01101111</td></tr>
+        <tr><td>P</td><td>80</td><td>01010000</td><td>p</td><td>112</td><td>01110000</td></tr>
+        <tr><td>Q</td><td>81</td><td>01010001</td><td>q</td><td>113</td><td>01110001</td></tr>
+        <tr><td>R</td><td>82</td><td>01010010</td><td>r</td><td>114</td><td>01110010</td></tr>
+        <tr><td>S</td><td>83</td><td>01010011</td><td>s</td><td>115</td><td>01110011</td></tr>
+        <tr><td>T</td><td>84</td><td>01010100</td><td>t</td><td>116</td><td>01110100</td></tr>
+        <tr><td>U</td><td>85</td><td>01010101</td><td>u</td><td>117</td><td>01110101</td></tr>
+        <tr><td>V</td><td>86</td><td>01010110</td><td>v</td><td>118</td><td>01110110</td></tr>
+        <tr><td>W</td><td>87</td><td>01010111</td><td>w</td><td>119</td><td>01110111</td></tr>
+        <tr><td>X</td><td>88</td><td>01011000</td><td>x</td><td>120</td><td>01111000</td></tr>
+        <tr><td>Y</td><td>89</td><td>01011001</td><td>y</td><td>121</td><td>01111001</td></tr>
+        <tr><td>Z</td><td>90</td><td>01011010</td><td>z</td><td>122</td><td>01111010</td></tr>
+    </table>
+</div>
+
+
+<script>
+  document.querySelectorAll('.clickable').forEach(rect => {
+    rect.addEventListener('click', () => {
+      const currentFill = rect.getAttribute('fill');
+      //rect.setAttribute('fill', currentFill === 'black' ? 'white' : 'black');
+	  //rect.setAttribute('stroke', 'black');
+	  //rect.setAttribute('fill', currentFill === 'none' ? 'black' : 'none');
+	  if (currentFill === 'black' || currentFill === 'blue') { 
+		rect.setAttribute('fill', 'white'); 
+	  } else { 
+		rect.setAttribute('fill', 'black'); // or any other color you prefer 
+	  } 
+	  rect.setAttribute('stroke', 'black');
+	  
+    });
+  });
+  
+ 
+  
+function handleRadioClick(event) {
+    const selectedOption = event.target.value;
+    console.log('Radio button clicked:', selectedOption);
+    // Hier können weitere Aktionen ausgeführt werden
+    
+	const totalRects = 21; 
+	// Anzahl der Rechtecke anpassen 
+
+/*	
+	// Beispielhafte Manipulation basierend auf der ausgewählten Maske 
+	if (selectedOption === 'mask2') 
+			
+			for(let j=0; j <= 21; j++){
+				for(let i=0; i <= 21; i++){
+				
+					//if(i%3 == 0){
+					
+						if( i >= 9){
+							i = i+1;
+						}	
+							const rect = document.getElementById(`rect${j}_${i}`); 
+							// Ändern Sie die Füllfarbe auf Blau
+							rect.setAttribute('fill', 'blue');
+						
+					//}
+				}
+				
+			}
+			 
+	} 
+*/	
+	//zurücksetzten
+	for(let k=1; k <= 21; k++){
+		for(let l=1; l <= 21; l++){
+			const recht = document.getElementById(`rect${k}_${l}`);
+			if(recht){
+				if (recht.getAttribute('fill') === 'lightblue'){
+					 recht.setAttribute('fill', 'white');
+				
+				}
+				if (recht.getAttribute('fill') === 'blue') { 
+					recht.setAttribute('fill', 'black'); 
+				}
+			}
+		}									
+	
+	}
+	
+	
+	
+		for( let j=1; j<= 21; j++){
+			for (let i = 1; i <= 21; i++) { 
+				
+					
+							const rect = document.getElementById(`rect${j}_${i}`);
+
+							if (rect) { 
+							 
+								if (selectedOption === 'mask2') {
+
+									i= i + 2;
+									if( ( (j >= 10 && j <= 13) && i < 7) || ( (i >= 10 && i <= 15 && j < 7)  || (i >= 10 && i <= 15 && j > 7 ))  || ( i >= 10 && j >= 10 )){
+									
+														
+										
+										
+										//rect.setAttribute('fill', 'green'); //stroke
+										if( rect.getAttribute('fill','black') === 'white'){
+											rect.setAttribute('fill', 'lightblue'); //stroke
+											//rect.setAttribute('stroke', 'red'); //stroke
+										}else{
+											rect.setAttribute('fill', 'blue'); //stroke
+										}
+									}
+								} 
+								
+								if (selectedOption === 'mask3') {
+									// Ändern Sie die Füllfarbe auf Rot 
+										//k = i % 3;
+										//l = j % 3;
+									m = (i + 4 + j)%3;
+									
+									if( m == 0 &&  (((j >= 10 && j <= 13) && i < 7) || ( i >= 10 && i <= 13 && j < 7 ) || (i >= 14 && j >= 10) || ( i >= 10 && i <= 13 && j > 7 )  || (i == 9 && j == 11) || (i == 8 && j == 12))  ){
+									
+										
+										
+										if( rect.getAttribute('fill','black') === 'white'){
+											rect.setAttribute('fill', 'lightblue'); //stroke
+											//rect.setAttribute('stroke', 'red'); //stroke
+										}else{
+											rect.setAttribute('fill', 'blue'); //stroke
+										}
+									}
+									 
+								} 
+								
+								if (selectedOption === 'mask0') {
+									
+									m = (i + 4 + j)%2;
+									
+									if( m == 0 &&  (((j >= 10 && j <= 13) && i < 7) || ( i >= 10 && i <= 13 && j < 7 ) || (i >= 14 && j >= 10) || ( i >= 10 && i <= 13 && j > 7 )  || (i == 9 && j == 11) || (i >= 8 && j <= 13 && j >= 10))  ){
+									
+										
+										
+										if( rect.getAttribute('fill','black') === 'white'){
+											rect.setAttribute('fill', 'lightblue'); //stroke
+											//rect.setAttribute('stroke', 'red'); //stroke
+										}else{
+											rect.setAttribute('fill', 'blue'); //stroke<
+										}
+									}
+									 
+								}
+								
+								if (selectedOption === 'mask1') {
+									
+									m = (j + 3)%2;
+									
+									if( m == 0 &&  (((j >= 10 && j <= 13) && i < 7) || ( i >= 10 && i <= 13 && j < 7 ) || (i >= 14 && j >= 10) || ( i >= 10 && i <= 13 && j > 7 )  || (i == 9 && j == 11) || (i >= 8 && j >= 10 && j < 14) )  ){
+									
+										
+										
+										if( rect.getAttribute('fill','black') === 'white'){
+											rect.setAttribute('fill', 'lightblue'); //stroke
+											//rect.setAttribute('stroke', 'red'); //stroke
+										}else{
+											rect.setAttribute('fill', 'blue'); //stroke
+										}
+									}
+									 
+								}
+								
+								
+							}
+								
+			}//for i
+						
+		}// for j
+				
+}//function RadiohandleClick
+		
+	
+	
+
+  
+  document.querySelectorAll('input[name="maske"]').forEach(radio => {
+    radio.addEventListener('click', handleRadioClick);
+	
+
+  });
+  
+ 
+  
+</script>
+
+</body>
+</html>
